@@ -1,0 +1,46 @@
+{
+  "name": "react-nodebird-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "cross-env ANALYZE=true NODE_ENV=production next build"
+  },
+  "author": "SHH",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@next/bundle-analyzer": "^13.0.4",
+    "antd": "^4.23.3",
+    "axios": "^1.1.2",
+    "babel-plugin-styled-components": "^2.0.7",
+    "cross-env": "^7.0.3",
+    "immer": "^9.0.15",
+    "moment": "^2.29.4",
+    "next": "^9.5.5",
+    "next-redux-wrapper": "^6.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-redux": "^8.0.4",
+    "react-slick": "^0.29.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-saga": "^1.2.1",
+    "shortid": "^2.2.16",
+    "styled-components": "^5.3.6",
+    "swr": "^1.3.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^5.5.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "faker": "^5.5.3"
+  }
+}

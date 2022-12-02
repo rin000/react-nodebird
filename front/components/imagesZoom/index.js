@@ -1,6 +1,7 @@
     import React, { useState } from 'react';
     import PropTypes from 'prop-types';
     import Slick from 'react-slick';
+    import { backUrl } from '../../config/config';
 
     import { Overlay, Global, Header, CloseBtn, ImgWrapper, Indicator, SlickWrapper } from './styles';
 
@@ -25,7 +26,7 @@
                         >
                 {images.map((v) => (
                 <ImgWrapper key={v.src}>
-                    <img src={`http://localhost:3065/${v.src}`} alt={v.src} />
+                    <img src={`${backUrl}/${v.src}`} alt={v.src} />
                 </ImgWrapper>
                 ))}
             </Slick>

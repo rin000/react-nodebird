@@ -36,7 +36,7 @@ db.sequelize.sync()
     }
 
     app.use(cors({
-        origin: ['http://localhost:3000', 'nodebird.com'],
+        origin: ['http://localhost:3000', 'nodebird.com', 'http://3.34.46.106'],
         credentials: true // cookie 전달
     }));
     app.use('/', express.static(path.join(__dirname, 'uploads')));

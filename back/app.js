@@ -68,6 +68,6 @@ app.use('/post', postRouter);
 app.use('/user', userRouter);
 app.use('/hashtag', hashtagRouter);
 
-app.listen(85, () => {
+app.listen(80, () => {
     console.log('서버 실행중!');
 });

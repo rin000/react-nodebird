@@ -11,7 +11,7 @@ import useInput from '../hooks/useInput';
 import Router from 'next/router';
 
 const SearchInput = styled(Input.Search)`
-    verticalAlign: middle;
+    vertical-Align: middle;
 `;
 
 const Global = createGlobalStyle`

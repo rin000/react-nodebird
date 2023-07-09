@@ -14,10 +14,14 @@ import {ADD_POST_REQUEST, ADD_POST_SUCCESS, ADD_POST_FAILURE,
         from "../reducers/post";
 import { ADD_POST_TO_ME, REMOVE_POST_OF_ME } from "../reducers/user";
 
+// takeLatest: 마지막에 클릭된 것만 실행
+// throttle: 마지막 함수 호출 후 몇초 제한
+// delay: 프론트에서 비동기 역할
 function retweetAPI(data) {
     return axios.post(`/post/${data}/retweet`);
 }
 
+// 한번만 실행된다 -> 해결: yield 사용
 function* retweet(action) {
     try {
         const result = yield call(retweetAPI, action.data);

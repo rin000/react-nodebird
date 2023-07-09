@@ -22,7 +22,7 @@
                         infinite // 무한반복
                         arrows={false} // 화살표 사라짐
                         slidesToShow={1}
-                        slidesToScroll={1} // 한번에 하나씩
+                        slidesToScroll={1} // 한번에 하나씩 넘기기
                         >
                 {images.map((v) => (
                 <ImgWrapper key={v.src}>

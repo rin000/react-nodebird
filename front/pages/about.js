@@ -14,7 +14,7 @@ const { userInfo } = useSelector((state) => state.user);
 return (
     <AppLayout>
     <Head>
-        <title>ZeroCho | NodeBird</title>
+        <title>NodeBird</title>
     </Head>
     {userInfo
         ? (

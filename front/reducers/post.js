@@ -17,19 +17,19 @@ export const initialState = {
     loadPostsLoading: false,
     loadPostsDone: false,
     loadPostsError: null,
-    addPostLoading: false,
+    addPostLoading: false, // 게시글 추가
     addPostDone: false,
     addPostError: null,
-    removePostLoading: false,
+    removePostLoading: false, // 게시글 삭제
     removePostDone: false,
     removePostError: null,
-    addCommentLoading: false,
+    addCommentLoading: false, // 댓글 추가
     addCommentDone: false,
     addCommentError: null,
-    uploadImagesLoading: false,
+    uploadImagesLoading: false, // 이미지 업로드
     uploadImagesDone: false,
     uploadImagesError: null,
-    retweetLoading: false,
+    retweetLoading: false, // 리트윗 추가
     retweetDone: false,
     retweetError: null
 };

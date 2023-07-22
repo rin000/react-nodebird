@@ -1,7 +1,7 @@
 import produce from "../util/produce";
 
 export const initialState = {
-    loadMyInfoLoading: false,
+    loadMyInfoLoading: false, // 내 정보 가져오기
     loadMyInfoDone: false,
     loadMyInfoError: null,
     loadUserLoading: false, // 유저 정보 가져오기 시도중
@@ -25,13 +25,13 @@ export const initialState = {
     changeNicknameLoading: false, // 닉네임 변경 시도중
     changeNicknameDone: false,
     changeNicknameError: null,
-    loadFollowingsLoading: false, 
+    loadFollowingsLoading: false, // 팔로윙 가져우기
     loadFollowingsDone: false,
     loadFollowingsError: null,
-    loadFollowersLoading: false, 
+    loadFollowersLoading: false, // 팔로워 가져오기
     loadFollowersDone: false,
     loadFollowersError: null,
-    removeFollowerLoading: false, 
+    removeFollowerLoading: false, // 팔로워 제거하기
     removeFollowerDone: false,
     removeFollowerError: null,
     me: null,

@@ -1,4 +1,5 @@
 // post/[id].js -> id값이 증가
+import React from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { END } from "redux-saga";

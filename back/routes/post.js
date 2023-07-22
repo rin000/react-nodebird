@@ -43,14 +43,14 @@ router.post('/', isLoggedIn, upload.none(), async (req, res, next) => { // POST 
             await post.addHashtags(result.map((v) => v[0]));
         }
         if(req.body.image) {
-            if (Array.isArray(req.body.image)) { // 이미지를 여러개 올리면 image: [이름1.png , 이름2.png] - 배열로 올라감
+            if (Array.isArray(req.body.image)) { // 이미지를 여러개 올리면 image: [name1.png , name2.png] - 배열로 올라감
                 const images = await Promise.all(req.body.image.map((image) => Image.create({ src: image })));
                 await post.addImages(images);
-            } else { // 이미지를 하나만 올리면 image: 이름.png - 배열x
+            } else { // 이미지를 하나만 올리면 image: name.png - 배열x
                 const image = await Image.create({ src: req.body.image });
                 await post.addImages(image);
             }
-        } 
+        }
         const fullPost = await Post.findOne({
             where: { id: post.id },
             include: [{
@@ -201,7 +201,7 @@ router.post('/:postId/comment', isLoggedIn, async (req, res, next) => { // POST 
         }
         const comment = await Comment.create({
             content: req.body.content,
-            PostId: parseInt(req.params.postId, 10),
+            PostId: parseInt(req.params.postId, 10), // req.params: 문자열 -> parseInt로 숫자로 변경
             UserId: req.user.id
         })
         const fullComment = await Comment.findOne({

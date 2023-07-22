@@ -1,7 +1,7 @@
 import produce from "../util/produce";
 
 export const initialState = {
-    loadMyInfoLoading: false, // 유저 정보 가져오기 시도중
+    loadMyInfoLoading: false,
     loadMyInfoDone: false,
     loadMyInfoError: null,
     loadUserLoading: false, // 유저 정보 가져오기 시도중

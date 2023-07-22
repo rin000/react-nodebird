@@ -5,10 +5,10 @@ export const initialState = {
     singlePost: null,
     imagePaths: [],
     hasMorePosts: true,
-    likePostLoading: false,
+    likePostLoading: false, // 좋아요 시도중
     likePostDone: false,
-    likePostError: null,
-    unlikePostLoading: false,
+    likePostError: null, 
+    unlikePostLoading: false, // 좋아요 취소 시도중
     unlikePostDone: false,
     unlikePostError: null,
     loadPostLoading: false,

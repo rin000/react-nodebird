@@ -24,6 +24,7 @@ const NicknameEditForm = () => {
                 addonBefore="닉네임" 
                 enterButton="수정"
                 onSearch={onSubmit}
+                placeholder="닉네임 수정"
             />
         </Form>
     );

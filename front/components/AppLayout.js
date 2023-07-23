@@ -40,7 +40,7 @@ const AppLayout = ({children}) => {
     return (
         <div>
         <Global />
-            <Menu mode="horizontal">
+            <Menu mode="horizontal" style={{display: 'flex', justifyContent: 'center', marginRight: '20%', gap: '10px'}}>
                 <Menu.Item key="home">
                     <Link href="/"><a>노드버드</a></Link>
                 </Menu.Item>
@@ -52,10 +52,11 @@ const AppLayout = ({children}) => {
                 </Menu.Item>
                 <Menu.Item>
                     <SearchInput 
-                    enterButton 
+                        enterButton 
                         value={searchInput}
                         onChange={onChangeSearchInput}
                         onSearch={onSearch}
+                        placeholder='검색어 입력'
                     />
                 </Menu.Item>
             </Menu>
@@ -71,7 +72,7 @@ const AppLayout = ({children}) => {
                 </Col>
                 <Col xs={24} md={6}>
                 {/* 보안상 적어놓기: rel= "noreferrer noopener", target: 새창에서 띄우기  */}
-                    <a href="http://www.naver.com" target="_blank" rel= "noreferrer noopener">NAVER</a>
+                    홈페이지 이동:<a href="http://www.naver.com" target="_blank" rel= "noreferrer noopener"> NAVER</a>
                 </Col>
             </Row>
         </div>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 
 const { TextArea } = Input;
-const PostCardContent = ({postData, editMode, onCancelUpdate}) => {
+const PostCardContent = ({postData, editMode, onChangePost, onCancelUpdate}) => {
     const { updatePostLoading, updatePostDone } = useSelector((state) => state.post);
     const [editText, setEditText] = useState(postData);
 
@@ -19,9 +19,10 @@ const PostCardContent = ({postData, editMode, onCancelUpdate}) => {
         setEditText(e.target.value); 
     }, []); 
 
-    const onChangePost = useCallback(() => {
-        
-    }, []);
+    const onClickCancel = useCallback(() => {
+        setEditText(postData);
+        onCancelUpdate();
+    })
 
     return (
     <div>
@@ -31,7 +32,7 @@ const PostCardContent = ({postData, editMode, onCancelUpdate}) => {
                 <TextArea value={editText} onChange={onChangeText} />
                 <Button.Group>
                     <Button loading={updatePostLoading} onClick={onChangePost(editText)}>수정</Button>
-                    <Button type="danger" onClick={onCancelUpdate}>취소</Button>
+                    <Button type="danger" onClick={onClickCancel}>취소</Button>
                 </Button.Group>
             </>
         )

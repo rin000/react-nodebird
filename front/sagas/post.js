@@ -204,7 +204,7 @@ function* addPost(action) {
 }
 
 function updatePostAPI(data) {
-    return axios.patch(`/post/${data.postId}`, data)
+    return axios.patch(`/post/${data.PostId}`, data)
 }
 
 function* updatePost(action) {

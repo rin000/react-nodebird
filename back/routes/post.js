@@ -20,10 +20,10 @@ const upload = multer({
     destination(req, file, done) {
       done(null, 'uploads');
     },
-    filename(req, file, done) { // 제로초.png
+    filename(req, file, done) { // name.png
       const ext = path.extname(file.originalname); // 확장자 추출(.png)
-      const basename = path.basename(file.originalname, ext); // 제로초
-      done(null, basename + '_' + new Date().getTime() + ext); // 제로초15184712891.png
+      const basename = path.basename(file.originalname, ext); // name
+      done(null, basename + '_' + new Date().getTime() + ext); // name15184712891.png
     },
   }),
   limits: { fileSize: 20 * 1024 * 1024 }, // 20MB
@@ -42,10 +42,10 @@ router.post('/', isLoggedIn, upload.none(), async (req, res, next) => { // POST 
       await post.addHashtags(result.map((v) => v[0]));
     }
     if (req.body.image) {
-      if (Array.isArray(req.body.image)) { // 이미지를 여러 개 올리면 image: [제로초.png, 부기초.png]
+      if (Array.isArray(req.body.image)) { // 이미지를 여러 개 올리면 image: [name1.png, name2.png]
         const images = await Promise.all(req.body.image.map((image) => Image.create({ src: image })));
         await post.addImages(images);
-      } else { // 이미지를 하나만 올리면 image: 제로초.png
+      } else { // 이미지를 하나만 올리면 image: name1.png
         const image = await Image.create({ src: req.body.image });
         await post.addImages(image);
       }

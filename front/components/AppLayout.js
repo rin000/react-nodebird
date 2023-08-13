@@ -20,14 +20,14 @@ const Global = createGlobalStyle`
         margin-left: 0 !important;
     }
 
-    .ant-col: first-child {
+    .ant-col:first-child {
         padding-left: 0 !important;
     }
 
-    .ant-col: last-child {
+    .ant-col:last-child {
         padding-right: 0 !important;
     }
-`;
+`; 
 
 const AppLayout = ({children}) => {
     const [searchInput, onChangeSearchInput] = useInput('');
@@ -42,7 +42,7 @@ const AppLayout = ({children}) => {
         <Global />
             <Menu mode="horizontal" style={{display: 'flex', justifyContent: 'center', marginRight: '20%', gap: '10px'}}>
                 <Menu.Item key="home">
-                    <Link href="/"><a>노드버드</a></Link>
+                    <Link href="/"><a>홈</a></Link>
                 </Menu.Item>
                 <Menu.Item key="profile">
                     <Link href="/profile"><a>프로필</a></Link>
